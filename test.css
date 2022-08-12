@@ -358,9 +358,9 @@ select {
   grid-area: resume-heading;
 }
 
-.resume-heading hr {
+/* .resume-heading hr {
   color: #3f3feb;
-}
+} */
 
 .resume-1 {
   grid-area: resume-1;
@@ -435,7 +435,7 @@ select {
   .main-content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.8fr 0.7fr 1fr;
+    grid-template-rows: 0.2fr 0.6fr 0.7fr 1fr;
     grid-template-areas: 'main-heading' 'col-1' 'col-2' 'col-3';
   }
 
