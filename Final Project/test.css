@@ -1,0 +1,546 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: dimgray;
+  font-family: 'Montserrat', cursive;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  background-image: url('rsz_background5.jpg');
+}
+
+.container {
+  height: 800px;
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr 1.6fr;
+  grid-template-rows: 1fr 0.1fr;
+  grid-template-areas: 'nav aside main' 'nav aside footer';
+}
+
+nav {
+  width: 75px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #238eff;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 10px 0px #000000bf;
+  height: 500px;
+  margin-top: 60px;
+  grid-area: nav;
+  width: 80%;
+  padding-bottom: 25px;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #929292;
+  box-shadow: 0px 0px 5px 5px #0831ffad;
+  border-radius: 5px;
+}
+
+.container nav div {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.container nav div p {
+  margin: 5px;
+}
+
+/* .container.main-content {
+  overflow: auto;
+} */
+
+aside {
+  border: 1px solid white;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px #000000bf;
+  height: 735px;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 5px;
+  grid-area: aside;
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#download,
+#contact {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+#contact {
+  border-left: 1px solid #ccc;
+}
+
+#download:hover,
+#contact:hover {
+  background-color: #bfbebe;
+}
+
+.active-page {
+  background-color: #3f3feb;
+  color: white;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: grid;
+  border: 1px solid #ccc;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  grid-template-areas: 'header header' 'col-1 col-2' 'col-3 col-3';
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  grid-area: main;
+}
+
+.main-heading {
+  grid-area: header;
+  padding: 30px;
+}
+
+.col-1 {
+  grid-area: col-1;
+}
+
+.col-2 {
+  grid-area: col-2;
+}
+
+.col-3 {
+  grid-area: col-3;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.col-2 th {
+  background-color: #238eff;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.col-2 td {
+  text-align: right;
+  padding-left: 20px;
+}
+
+.social-media {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.social-media a {
+  color: #238eff;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.skills.md-60 {
+  background-color: dimgray;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 50px;
+  padding: 10px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.skills-text {
+  font-size: 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+
+.wrapper > div {
+  padding-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #238eff;
+  height: 50px;
+  text-align: center;
+  padding-bottom: 7px;
+  border-radius: 0 0 5px 5px;
+  color: white;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+ .form-content {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #ccc;
+}
+
+form {
+  display: grid;
+  padding: 35px;
+  grid-gap: 3px;
+  overflow-y: auto;
+  height: 540px;
+}
+
+.form-heading {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+} 
+
+.required {
+  color: red;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.submit,
+.reset {
+  background-color: #d6d6d6;
+}
+
+.submit:hover,
+.reset:hover {
+  background-color: #bfbebe;
+}
+
+.interests-content {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  grid-template-areas:
+    'interests-heading interests-heading'
+    'interests-1 interests-2' 'interests-3 interests-4';
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+.interests-heading {
+  grid-area: interests-heading;
+  padding: 30px;
+}
+
+.interests-1,
+.interests-2,
+.interests-3,
+.interests-4 {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.interests-1 {
+  grid-area: interests-1;
+}
+
+.interests-1 img,
+.interests-2 img,
+.interests-3 img,
+.interests-4 img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interests-2 {
+  grid-area: interests-2;
+}
+
+.interests-3 {
+  grid-area: interests-3;
+}
+
+.interests-4 {
+  grid-area: interests-4;
+}
+
+.education-content {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  grid-template-areas:
+    'education-heading'
+    'education-1' 'education-2';
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.education-heading {
+  grid-area: education-heading;
+  padding: 30px 30px 10px 30px;
+}
+
+.education-1 {
+  grid-area: education-1;
+}
+
+.education-2 {
+  grid-area: education-2;
+}
+
+.main-content h2,
+.interests-heading,
+.form-heading,
+.resume-heading {
+  text-align: center;
+}
+
+.resume-content {
+  background-color: white;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.6fr 1fr 0.4fr 1fr;
+  grid-template-areas:
+    'resume-heading resume-heading resume-heading'
+    'resume-1 resume-1 resume-2'
+    'resume-1 resume-1 resume-2'
+    'resume-3 resume-3 resume-4'
+    'resume-5 resume-5 resume-5';
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+.resume-heading {
+  grid-area: resume-heading;
+}
+
+.resume-heading hr {
+  color: #3f3feb;
+}
+
+.resume-1 {
+  grid-area: resume-1;
+}
+
+.resume-1 li,
+.resume-3 li,
+.resume-4 li {
+  color: #3f3feb;
+}
+
+.bullets {
+  color: dimgray;
+}
+
+.year {
+  color: #3f3feb;
+}
+
+/* .resume-1 p,
+.resume-3 p,
+.resume-4 p,
+.resume-5 p {
+  margin: 0;
+  padding: 0;
+} */
+
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+
+.resume-2 {
+  grid-area: resume-2;
+}
+
+.resume-highlight {
+  background-color: #3f3feb;
+  color: white;
+  padding: 2px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.resume-3 {
+  grid-area: resume-3;
+}
+
+.resume-4 {
+  grid-area: resume-4;
+}
+
+.resume-5 {
+  grid-area: resume-5;
+}
+
+.resume-title {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  body {
+    max-width: 800px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'nav' 'aside' 'main' 'footer';
+    width: 100%;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr 0.7fr 1fr;
+    grid-template-areas: 'main-heading' 'col-1' 'col-2' 'col-3';
+  }
+
+  .main-heading {
+    grid-area: main-heading;
+  }
+
+  .col-1 {
+    grid-area: col-1;
+  }
+
+  .col-2 {
+    grid-area: col-2;
+  }
+
+  .col-3 {
+    grid-area: col-3;
+    padding-bottom: 30px;
+  }
+
+  nav {
+    margin-right: 100px;
+    width: 100%;
+    grid-area: nav;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  aside img {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    grid-area: main;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .interests-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'interests-heading'
+      'interests-1' 'interests-2' 'interests-3' 'interests-4';
+  }
+
+  .interests-heading {
+    grid-area: interests-heading;
+  }
+
+  .interests-1 {
+    grid-area: interests-1;
+  }
+
+  .interests-2 {
+    grid-area: interests-2;
+  }
+
+  .interests-3 {
+    grid-area: interests-3;
+  }
+
+  .interests-4 {
+    grid-area: interests-4;
+  }
+
+  .resume-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.6fr 0.4fr 0.4fr 0.4fr;
+    grid-template-areas:
+      'resume-heading'
+      'resume-1'
+      'resume-3'
+      'resume-2'
+      'resume-4'
+      'resume-5';
+  }
+
+  .resume-heading {
+    grid-area: resume-heading;
+  }
+
+  .resume-1 {
+    grid-area: resume-1;
+  }
+
+  .resume-2 {
+    grid-area: resume-2;
+  }
+
+  .resume-3 {
+    grid-area: resume-3;
+  }
+
+  .resume-4 {
+    grid-area: resume-4;
+  }
+
+  .resume-5 {
+    grid-area: resume-5;
+  }
+}
