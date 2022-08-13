@@ -55,7 +55,7 @@ function validatePhoneNumber() {
   let input = document.registration.phone.value.trim();
 
   if (
-    input.length !== 15 ||
+    input.length !== 1 ||
     input.length !== 0 ||
     input.charAt(0) !== '(' || 
     input.charAt(4) !== ')' || 

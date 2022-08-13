@@ -570,7 +570,6 @@ select:focus {
       'resume-2'
       'resume-4'
       'resume-5';
-    overflow-y: auto;
   }
 
   .resume-heading {
