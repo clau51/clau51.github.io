@@ -53,10 +53,11 @@ function validatePhoneNumber() {
   let errors = document.querySelector('#errors');
   let phone = document.querySelector('#phone');
   let input = document.registration.phone.value.trim();
+  console.log(input.length);
 
   if (
-    input.length !== 1 ||
-    input.length !== 0 ||
+    input !== '' ||
+    input !== null ||
     input.charAt(0) !== '(' || 
     input.charAt(4) !== ')' || 
     input.charAt(5) !== ' ' ||
@@ -67,8 +68,19 @@ function validatePhoneNumber() {
     phone.focus();
     return false;
   }
-  return true;
-}
+
+//   //function
+//     if (input.length === 10) {
+//         return true;
+//     } else {
+//         errors.innerHTML +=
+
+//         '<p>NOTE: Phone number must be 10 digits long with the following format: (999) 999-9999</p>';
+//         phone.focus();
+//         return false;
+//     }
+// }
+
 
 
 //Validate if the postal code is in the correct format
