@@ -1,10 +1,7 @@
-
-
 var httpRequest;
 
-
-
 function makeRequest() {
+  debugger;
   var url = 'https://reqres.in/api/users?page=1';
   httpRequest = new XMLHttpRequest();
 
@@ -26,40 +23,89 @@ function showContents() {
 
       console.log('jsObj', jsObj); //for debugging
 
-      let table = document.createElement('table');
-      table.setAttribute('id', 'table-1');
+      let expertise = document.querySelector('.expertise-content');
 
-      let topRow = createTextRow([
-        'ID',
-        'First Name',
-        'Last Name',
-        'Email',
-        'Avatar',
-      ]);
-      table.appendChild(topRow);
+      for (let i = 0; i < jsObj.data.length; i++) {
+        let article = document.createElement('article');
+        article.setAttribute('class', 'card');
 
-      for (let i = 0; i < jsObj.length; i++) {
-        let row = createTextRow([
-          jsObj[i].id,
-          jsObj[i].first_name,
-          jsObj[i].last_name,
-          jsObj[i].email,
-          jsObj[i].avatar,
-        ]);
-        table.appendChild(row);
+        let h2 = document.createElement('h2');
+        h2.setAttribute('class', 'name');
+        h2.appendChild(document.createTextNode(jsObj.data[i].first_name + ' ' + jsObj.data[i].last_name));
+
+        let header = document.createElement('header');
+        header.appendChild(h2);
+
+        let img = document.createElement('img');
+        img.setAttribute('src', jsObj.data[i].avatar);          
+        // img.alt = jsObj[i].first_name + ' ' + jsObj[i].last_name;
+        img.setAttribute('alt', jsObj.data[i].first_name);
+
+        let p = document.createElement('p');
+        p.setAttribute('class', 'email-header');
+        p.innerHTML = '<b>Email:</b>';
+
+        let email = document.createElement('p');
+        email.setAttribute('class', 'email');
+        // email.innerHTML = jsObj[i].email;
+        email.appendChild(document.createTextNode(jsObj.data[i].email));
+
+        let div = document.createElement('div');
+        div.appendChild(p);
+        div.appendChild(email);
+
+        article.appendChild(header);
+        article.appendChild(img);
+        article.appendChild(div);
+        expertise.appendChild(article);
       }
+      
+
+      // jsObj.forEach = function (jsObj) {
+
+      //   let article = document.createElement('article');
+      //   article.setAttribute('class', 'card');
+
+      //   let h2 = document.createElement('h2');
+      //   h2.setAttribute('class', 'name');
+      //   h2.innerHTML = jsObj.first_name + ' ' + jsObj.last_name;
+
+      //   let header = document.createElement('header');
+      //   header.appendChild(h2);
+
+      //   let img = document.createElement('img');
+      //   img.src = jsObj.avatar;
+      //   img.alt = jsObj.first_name + ' ' + jsObj.last_name;
+
+      //   let p = document.createElement('p');
+      //   p.setAttribute('class', 'email-header');
+      //   p.innerHTML = 'Email:';
+
+      //   let email = document.createElement('p');
+      //   email.setAttribute('class', 'email');
+      //   email.innerHTML = jsObj.email;
+
+      //   let div = document.createElement('div');
+      //   div.appendChild(p);
+      //   div.appendChild(email);
+
+      //   article.appendChild(header);
+      //   article.appendChild(img);
+      //   article.appendChild(div);
+      //   expertise.appendChild(article);
+      // }
+
+      // document.querySelector('.expertise-content').appendChild(article);
+    } else {
+      alert(
+        'There was a problem with the request. May be caused by the "CORS" issue'
+      );
     }
   }
 }
 
-function createTextRow(data) {
-  let rowElement = document.createElement('tr');
-
-  for (let i = 0; i < data.length; i++) {
-    let col = document.createElement('td');
-    col.appendChild(document.createTextNode(data[i]));
-    rowElement.appendChild(col);
-  }
+window.onload = function () {
+  makeRequest();
 }
 
-window.onload = makeRequest;
+
