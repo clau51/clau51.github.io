@@ -78,32 +78,51 @@ aside {
   grid-area: aside;
 }
 
+
 .buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'download contact';
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
+  border-top: 1px solid #ccc;
+}
+
+#download {
+  grid-area: download;
+  padding: 30px;
+}
+
+#contact {
+  grid-area: contact;
+  padding: 30px;
 }
 
 #download,
 #contact {
-  flex: 1;
-  padding: 20px;
+  border: none;
   background-color: white;
-  border-top: 1px solid #ccc;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
 }
 
-#contact {
+.contact-button {
   border-left: 1px solid #ccc;
 }
 
-#download:hover,
-#contact:hover {
-  background-color: #bfbebe;
+.buttons a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.buttons a:hover {
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #929292;
+  box-shadow: 0px 0px 5px 5px #ccc;
+  border-radius: 5px;
 }
 
 .active-page {
@@ -212,7 +231,7 @@ aside {
   border-right: 1px solid #ccc;
 }
 
- .form-content {
+.form-content {
   background-color: white;
   border-radius: 5px 5px 0 0;
   border: 1px solid #ccc;
@@ -230,7 +249,7 @@ form {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 30px;
-} 
+}
 
 .required {
   color: red;
@@ -379,14 +398,6 @@ select {
 .year {
   color: #3f3feb;
 }
-
-/* .resume-1 p,
-.resume-3 p,
-.resume-4 p,
-.resume-5 p {
-  margin: 0;
-  padding: 0;
-} */
 
 .no-space {
   margin: 0;
