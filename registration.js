@@ -55,7 +55,7 @@ function validatePhoneNumber() {
   let input = document.registration.phone.value.trim();
 
   if (
-    input.length !== 14 ||
+    input.length !== 15 ||
     input.length !== 0 ||
     input.charAt(0) !== '(' || 
     input.charAt(4) !== ')' || 
@@ -69,6 +69,7 @@ function validatePhoneNumber() {
   }
   return true;
 }
+
 
 //Validate if the postal code is in the correct format
 function validatePostalCode() {
