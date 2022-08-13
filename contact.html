@@ -1,26 +1,30 @@
-<!-- /********************************************************************************* 
+<!-- 
+/*********************************************************************************
 *
-* WEB222 – Assignment #5
+* WEB222 – Final Assessment
 *
-* I declare that this assignment is my own work in accordance with Seneca 
-* Academic Policy. No part of this assignment has been copied manually or 
-* electronically from any other source (including web sites) or distributed to 
-* other students. 
-* 
-* Name: Carmen Lau Student ID: 166689216 Date: August 1, 2022
-* 
+* I declare that this assignment is my own work in accordance with Seneca
+* Academic Policy. No part of this assignment has been copied manually or
+* electronically from any other source (including web sites) except for the
+* information supplied by the WEB222 instructors and / or made available in 
+* this assessment for my use. I also declare that no part of this assignment
+* has been distributed to other students.
+*
+* Name: Carmen Lau Student ID: 166689216 Date: August 15, 2022
+*
 ********************************************************************************/ -->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="template.css" />
-    <script type="text/javascript" src="registration.js"></script>
 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+
+    <script type="text/javascript" src="contact.js"></script>
 
     <link
       rel="stylesheet"
@@ -124,122 +128,150 @@
           onsubmit="return formValidation()"
         >
           <!-- First Name -->
-          <label for="full-name"
-            ><span class="required">* </span>Full Name:</label
-          >
-          <input
-            id="full-name"
-            name="full-name"
-            type="text"
-            class="form-control"
-            required
-          />
+
+          <div class="form-field">
+            <label for="full-name"
+              ><span class="required">* </span>Full Name:</label
+            >
+            <input
+              id="full-name"
+              name="full-name"
+              type="text"
+              class="form-control"
+              required
+            />
+            <small></small>
+          </div>
 
           <!-- Occupation -->
-          <label for="form-occupation">Occupation:</label>
-          <input
-            id="form-occupation"
-            name="form-occupation"
-            type="text"
-            class="form-control"
-          />
+          <div class="form-field">
+            <label for="form-occupation">Occupation:</label>
+            <input
+              id="form-occupation"
+              name="form-occupation"
+              type="text"
+              class="form-control"
+            />
+            <small></small>
+          </div>
 
           <!-- Unit Address -->
-          <label for="address-unit">Unit:</label>
-          <input
-            id="address-unit"
-            name="address-unit"
-            type="text"
-            class="form-control"
-          />
+          <div class="form-field">
+            <label for="address-unit">Unit:</label>
+            <input
+              id="address-unit"
+              name="address-unit"
+              type="text"
+              class="form-control"
+            />
+            <small></small>
+          </div>
 
           <!-- Street Address -->
-          <label for="address-street">Street Name:</label>
-          <input
-            id="address-street"
-            name="address-street"
-            class="form-control"
-            type="text"
-            placeholder="e.g. Jane Street"
-            onchange="validateAddressStreet()"
-          />
+          <div class="form-field">
+            <label for="address-street">Street Name:</label>
+            <input
+              id="address-street"
+              name="address-street"
+              class="form-control"
+              type="text"
+              placeholder="e.g. Jane Street"
+              onchange="validateAddressStreet()"
+            />
+            <small></small>
+          </div>
 
           <!-- City -->
-          <label for="city">City:</label>
-          <input
-            id="city"
-            name="city"
-            type="text"
-            class="form-control"
-            placeholder="e.g. Toronto"
-            onchange="validateCity()"
-          />
+          <div class="form-field">
+            <label for="city">City:</label>
+            <input
+              id="city"
+              name="city"
+              type="text"
+              class="form-control"
+              placeholder="e.g. Toronto"
+              onchange="validateCity()"
+            />
+            <small></small>
+          </div>
 
           <!-- Province -->
-          <label for="province"
-            >Province:</label
-          >
-          <select id="province" name="province" class="form-control">
-            <option value="AB">Alberta</option>
-            <option value="BC">British Columbia</option>
-            <option value="MB">Manitoba</option>
-            <option value="NB">New Brunswick</option>
-            <option value="NL">Newfoundland and Labrador</option>
-            <option value="NS">Nova Scotia</option>
-            <option value="ON" selected>Ontario</option>
-            <option value="PE">Prince Edward Island</option>
-            <option value="QC">Quebec</option>
-            <option value="SK">Saskatchewan</option>
-            <option value="NT">Northwest Territories</option>
-            <option value="NU">Nunavut</option>
-            <option value="YT">Yukon</option>
-            <option value="selected" selected>Select a province</option>
-          </select>
+          <div class="form-field">
+            <label for="province">Province:</label>
+            <select id="province" name="province" class="form-control">
+              <option value="AB">Alberta</option>
+              <option value="BC">British Columbia</option>
+              <option value="MB">Manitoba</option>
+              <option value="NB">New Brunswick</option>
+              <option value="NL">Newfoundland and Labrador</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="ON" selected>Ontario</option>
+              <option value="PE">Prince Edward Island</option>
+              <option value="QC">Quebec</option>
+              <option value="SK">Saskatchewan</option>
+              <option value="NT">Northwest Territories</option>
+              <option value="NU">Nunavut</option>
+              <option value="YT">Yukon</option>
+              <option value="selected" selected>Select a province</option>
+            </select>
+            <small></small>
+          </div>
 
           <!-- Postal Code -->
-          <label for="postal-code"
-            >Postal Code:</label
-          >
-          <input
-            id="postal-code"
-            name="postal-code"
-            class="form-control"
-            type="text"
-            placeholder="e.g. M15A1P"
-            onchange="validatePostalCode()"
-          />
+          <div class="form-field">
+            <label for="postal-code">Postal Code:</label>
+            <input
+              id="postal-code"
+              name="postal-code"
+              class="form-control"
+              type="text"
+              placeholder="e.g. M15A1P"
+              onchange="validatePostalCode()"
+            />
+            <small></small>
+          </div>
 
           <!-- Phone Number -->
-          <label for="phone">Phone Number:</label>
-          <input
-            id="phone"
-            name="phone"
-            class="form-control"
-            type="tel"
-            placeholder="e.g. (416) 555-5555"
-            onchange="validatePhoneNumber()"
-          />
+          <div class="form-field">
+            <label for="phone">Phone Number:</label>
+            <input
+              id="phone"
+              name="phone"
+              class="form-control"
+              type="tel"
+              placeholder="e.g. (416) 555-5555"
+              onchange="validatePhoneNumber()"
+            />
+            <small></small>
+          </div>
 
           <!-- Email -->
-          <label for="email"><span class="required">* </span>Email:</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            class="form-control"
-            placeholder="e.g. user@example.com"
-            required
-          />
+          <div class="form-field">
+            <label for="email"><span class="required">* </span>Email:</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="e.g. user@example.com"
+              required
+            />
+            <small></small>
+          </div>
 
-          <label for="form-message"
-            ><span class="required">* </span>Message:</label
-          >
-          <textarea
-            id="form-message"
-            name="form-message"
-            rows="10"
-            placeholder="Please enter your message..."
-          ></textarea>
+          <div class="form-field">
+            <label for="form-message"
+              ><span class="required">* </span>Message:</label
+            >
+            <textarea
+              id="form-message"
+              name="form-message"
+              rows="10"
+              placeholder="Please enter your message..."
+              required
+            ></textarea>
+            <small></small>
+          </div>
 
           <!-- Hidden fields for student ID and name -->
           <input type="hidden" name="lau" id="lau" value="lau" />
@@ -251,11 +283,8 @@
             value="166689216"
           />
 
-          <!-- Error message -->
-          <div id="errors"></div>
-
           <!-- Submit button -->
-          <div class="button">
+          <div class="form-field">
             <input type="submit" class="submit" name="submit" value="Submit" />
 
             <!-- Reset button -->

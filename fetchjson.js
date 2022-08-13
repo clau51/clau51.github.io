@@ -1,3 +1,18 @@
+/*********************************************************************************
+*
+* WEB222 – Final Assessment
+*
+* I declare that this assignment is my own work in accordance with Seneca
+* Academic Policy. No part of this assignment has been copied manually or
+* electronically from any other source (including web sites) except for the
+* information supplied by the WEB222 instructors and / or made available in 
+* this assessment for my use. I also declare that no part of this assignment
+* has been distributed to other students.
+*
+* Name: Carmen Lau Student ID: 166689216 Date: August 15, 2022
+*
+********************************************************************************/
+
 var httpRequest;
 
 function makeRequest() {
