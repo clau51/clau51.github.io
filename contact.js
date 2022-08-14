@@ -156,7 +156,7 @@ function validateCity() {
   }
 
   if (valid === false) {
-    errorMessage(city, 'Invalid city');
+    errorMessage(city, 'City cannot contain numbers');
   } else {
     successMessage(city);
   }

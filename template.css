@@ -384,10 +384,6 @@ select:focus {
   grid-area: resume-heading;
 }
 
-/* .resume-heading hr {
-  color: #3f3feb;
-} */
-
 .resume-1 {
   grid-area: resume-1;
 }
@@ -462,7 +458,6 @@ select:focus {
 }
 
 .card img {
-  object-fit: cover;
   width: 60%;
   border-radius: 55%;
   margin: 0 auto;
@@ -597,4 +592,11 @@ select:focus {
   .expertise-content {
     overflow: unset;
   }
+
+  .expertise-heading {
+    grid-column: 1;
+  }
+
+  
+  
 }
