@@ -79,6 +79,11 @@ aside {
   grid-area: aside;
 }
 
+aside img {
+  padding: 30px;
+  border-radius: 35px;
+}
+
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,10 +119,10 @@ aside {
 
 .buttons a {
   display: block;
-  color: white;
+  color: dimgray;
   text-decoration: none;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  height: 50px;
+  padding-top: 30px;
 }
 
 .buttons a:hover {
@@ -270,6 +275,7 @@ select:focus {
 .submit,
 .reset {
   background-color: #d6d6d6;
+  cursor: pointer;
 }
 
 .submit:hover,
@@ -466,6 +472,18 @@ select:focus {
   box-shadow: 0px 0px 5px 5px #0831ffad;
 }
 
+.page-button {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.page-button:hover {
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #929292;
+  box-shadow: 0px 0px 5px 5px #ccc;
+  border-radius: 5px;
+}
+
 @media (max-width: 800px) {
   body {
     max-width: 800px;
@@ -597,6 +615,7 @@ select:focus {
     grid-column: 1;
   }
 
-  
-  
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
 }

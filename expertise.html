@@ -17,8 +17,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Carmen Lau" />
+    <title>Lau - Expertise</title>
     <link rel="stylesheet" type="text/css" href="template.css" />
-    <script type="text/javascript" src="fetchjson.js"></script>
+    <script src="fetchjson.js"></script>
 
     <link
       rel="stylesheet"
@@ -36,11 +40,6 @@
       href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Author" content="Carmen Lau" />
-    <title>Lau</title>
   </head>
 
   <body>
@@ -102,14 +101,12 @@
 
         <div class="buttons">
           <div class="download-button">
-            <a href="CarmenLau_CV.docx" download>
-              <button id="download">Download CV</button>
-            </a>
+            <a href="CarmenLau_CV.docx" download="CarmenLau_CV.docx"
+              >Download CV</a
+            >
           </div>
           <div class="contact-button">
-            <a href="contact.html">
-              <button id="contact">Contact Me</button>
-            </a>
+            <a href="contact.html">Contact Me</a>
           </div>
         </div>
       </aside>
@@ -117,9 +114,20 @@
       <main class="expertise-content">
         <div class="expertise-heading">
           <h2>Expertise</h2>
-          <hr>
+          <hr />
+          <div class="pages">
+            <button class="page-button" onclick="makeRequest(1);">
+              &lt;&lt;
+            </button>
+            <button class="page-button" onclick="makeRequest(1);">1</button>
+            <button class="page-button" onclick="makeRequest(2);">2</button>
+            <button class="page-button" onclick="makeRequest(3);">3</button>
+            <button class="page-button" onclick="makeRequest(4);">4</button>
+            <button class="page-button" onclick="makeRequest(4);">
+              &gt;&gt;
+            </button>
+          </div>
         </div>
-        
       </main>
 
       <div class="footer">
@@ -128,18 +136,3 @@
     </div>
   </body>
 </html>
-<!-- 
-<article class="card">
-  <header>
-    <h2>A short heading</h2>
-  </header>
-  <img src="balloons.jpg" alt="Hot air balloons" />
-  <div class="content">
-    <p>
-    </p>
-    <p>
-      The idea of reaching the North Pole by means of balloons appears to have
-      been entertained many years ago.
-    </p>
-  </div>
-</article> -->
