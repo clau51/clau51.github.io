@@ -490,15 +490,19 @@ select:focus {
   }
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 'nav' 'aside' 'main' 'footer';
     width: 100%;
+  }
+  
+  header {
+    text-align: center;
   }
 
   .main-content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.6fr 0.7fr 1fr;
+    grid-template-rows: 0.2fr 0.3fr 0.3fr 1fr;
     grid-template-areas: 'main-heading' 'col-1' 'col-2' 'col-3';
   }
 
@@ -533,7 +537,7 @@ select:focus {
     padding-top: 20px;
   }
 
-  .main-content {
+  .main-content, .form-content, .resume-content, .expertise-content, .interests-content, .education-content {
     grid-area: main;
   }
 
