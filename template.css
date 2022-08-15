@@ -613,6 +613,8 @@ select:focus {
 
   .expertise-content {
     overflow: unset;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .expertise-heading {
